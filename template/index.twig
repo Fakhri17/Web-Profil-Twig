@@ -1,0 +1,30 @@
+{# {% extends "layout.twig" %}
+
+{% block info %}
+  {% include "banner.twig" with {
+    title: 'Discount September',
+    description: 'Twig is used by many Open-Source projects like Symfony, Drupal8, eZPublish, phpBB, Matomo, OroCRM; and many frameworks have support for it as well like Slim, Yii, Laravel, and Codeigniter — just to name a few.'
+  } %}
+{% endblock %}
+
+{% block content %}
+  <h2 class="text-lg">Pendidikan</h2>
+  {% for item in education %}
+  <div class="mt-2 border-b border-gray-200 pb-4">
+    <p class="text-gray-500 text-sm">{{ item.year }}</p>
+    <p class="text-blue-700 font-semibold">{{ item.deggre }}</p>
+    <p class="text-gray-700 font-semibold">{{ item.scholl }}</p>
+    <p class="text-gray-700 text-sm">{{ item.location }}</p>
+   
+  </div>
+  {% endfor %}
+  <h2 class="text-lg">Skills</h2>
+  {% for item in skills %}
+  <div class="mt-2 border-b border-gray-200 pb-4">
+    <p class="text-gray-500 text-sm">{{ item.skill }}</p>
+    <p class="text-blue-700 font-semibold">{{ item.deskripsi }}</p>
+   
+  </div>
+  {% endfor %}
+{% endblock %} #}
+
