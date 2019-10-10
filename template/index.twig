@@ -1,30 +1,174 @@
-{# {% extends "layout.twig" %}
+ {% extends "layout.twig" %}
 
-{% block info %}
-  {% include "banner.twig" with {
-    title: 'Discount September',
-    description: 'Twig is used by many Open-Source projects like Symfony, Drupal8, eZPublish, phpBB, Matomo, OroCRM; and many frameworks have support for it as well like Slim, Yii, Laravel, and Codeigniter — just to name a few.'
-  } %}
-{% endblock %}
+ {% block info %}
+    {% include "banner.twig" %}
+ {% endblock %}
 
-{% block content %}
-  <h2 class="text-lg">Pendidikan</h2>
-  {% for item in education %}
-  <div class="mt-2 border-b border-gray-200 pb-4">
-    <p class="text-gray-500 text-sm">{{ item.year }}</p>
-    <p class="text-blue-700 font-semibold">{{ item.deggre }}</p>
-    <p class="text-gray-700 font-semibold">{{ item.scholl }}</p>
-    <p class="text-gray-700 text-sm">{{ item.location }}</p>
-   
-  </div>
-  {% endfor %}
-  <h2 class="text-lg">Skills</h2>
-  {% for item in skills %}
-  <div class="mt-2 border-b border-gray-200 pb-4">
-    <p class="text-gray-500 text-sm">{{ item.skill }}</p>
-    <p class="text-blue-700 font-semibold">{{ item.deskripsi }}</p>
-   
-  </div>
-  {% endfor %}
-{% endblock %} #}
+    {% block profile %}
+    <div class="columns is-dekstop">
+      <div class="column is-half">
+        <div class="card">
+          <br>
+          <h1 class="title has-text-centered" id="profile">PROFIL</h1>
+          <div class="card-image has-text-centered">
+            <figure class="image is-128x128 is-inline-block">
+              <img src="{{profile}}" alt="">
+            </figure>   
+          </div>
+          <div class="card-content">
+            <div class="content subtitle">
+              Nama   <strong> Fakhri Alauddin         </strong>.
+              TTL    <strong> Jombang, 31  Maret 2001 </strong>.
+              Umur   <strong> 18 Tahun                </strong>.
+              Alamat <strong> Jl.Raya Benowo No 06    </strong>.
+              Hobi   <strong> Coding dan Editing      </strong>.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column is-half">
+        <div class="card"><br>
+          <h1 class="title has-text-centered">SOSMED</h1>
+          <div class="card-image has-text-centered">
+            <figure class="image is-128x128 is-inline-block">
+              <img src="{{sosmed}}" alt="">
+            </figure>  
+          </div>
+          <div class="card-content">
+            <div class="content subtitle has-text-centered">
+              <p> You cand find me :</p>
+              <a class="button" href="https://www.facebook.com/Tayo2001" target="_blank">Facebook</a>
+              <a class="button" href="https://www.instagram.com/fakhrialauddin13/" target="_blank">Instagram</a>
+              <a class="button" href="https://wa.me/628970632441" target="_blank">Whatsapp</a>
+              <a class="button" href="https://t.me/Fakhri_AL" target="_blank">Telegram</a>
+              <a class="button" href="https://github.com/Fakhri17" target="_blank">Github</a> 
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}
 
+    {% block programming %}
+    <div class="container has-text-centered" id="skills">
+      <h1 class="title"> Programming</h1>
+    </div> <br><br>
+        <div class="columns is-dekstop is-multiline">
+        {% for item in skills %}
+            <div class="column is-4">
+              <article class="message is-info">
+                <div class="message-header">
+                  {{item.skill}}
+                </div>
+                <div class="message-body">
+                  <div class="card-image has-text-centered">
+                    <figure class="image is-128x128 is-inline-block">
+                        <img src="{{item.img}}">
+                    </figure>
+                  </div>
+                  <div class="subtitle">
+                    Skills {{item.deskripsi}}
+                  </div>
+                </div>
+              </article>
+            </div>
+        {% endfor %}
+    </div>
+    {% endblock %}
+
+    {% block education %}
+    <div class="container has-text-centered " id="education">
+      <h1 class="title"> Education </h1>
+    </div><br><br>
+        {% for item in education %}
+        <div class="columns is-dekstop">
+          <div class="column">
+            <div class="box">
+              <div class="card-image has-text-centered">
+                <figure class="image is-3by1">
+                   <img src="{{item.imsch}}" >
+                </figure>
+              </div>
+                <p class="title is-4">{{item.scholl}}</p>
+                <p class="subtitle">Year : {{item.year}}</p>
+                <p class="subtitle">Deggre : {{item.deggre}}</p>
+                <p class="subtitle">Location : {{item.location}}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+    {% endblock %}
+
+    {% block portfolio %}
+    <div class="container has-text-centered" id="portfolio">
+      <h1 class="title"> Portfolio </h1>
+    </div><br><br>
+
+    <div class="tile is-ancestor">
+      {% for item in portfolio %}
+      <div class="tile is-parent">
+        <article class="tile is-child box">
+          <p class="title has-text-centered">{{item.judul}}</p>
+          <p class="subtitle has-text-centered">{{item.sub}}</p>
+          <a  class="image is-3by1" href="portfolio.php?id={{item.id}}">
+            <img src="{{item.imgweb[0]}}" alt="">
+          </a> 
+        </article>
+      </div>
+      {% endfor %}
+    </div>
+    {% endblock %}
+
+    {% block contact %}
+    <div class="container has-text-centered ">
+      <h1 class="title"> Contact </h1>
+    </div><br><br>
+
+    <form action="send.php" method="post">
+        <div class="container">
+              <div class="field">
+                 <label class="label">Name</label>
+                   <div class="control">
+                     <input class="input" type="text" name="Name"
+                     data-validation="length" 
+                     data-validation-length="3-12" 
+                     data-validation-error-msg=" Name harus (3-12 chars)"
+                     placeholder="Your Name" >
+                   </div>
+                </div>
+                  <div class="field">
+                   <label class="label">Telp</label>
+                      <div class="control">
+                       <input class="input" type="number" name="Telp" data-validation="length telp"
+                       data-validation-length="11-12" 
+                       placeholder="0897063****">
+                     </div>
+                   </div>
+                   <div class="field">
+                   <label class="label">Email</label>
+                      <div class="control">
+                       <input class="input" type="email" name="Email" data-validation="email"placeholder="your@mail.com">
+                     </div>
+                   </div>
+                   <div class="field">
+                     <label class="label">Message</label>
+                     <div class="control">
+                       <textarea class="textarea is-mobile" placeholder="Message" name="Massage"></textarea>
+                     </div>
+                   </div>
+             <div class="field is-grouped">
+               <div class="control">
+               <input class="button is-link" type="submit" value="Submit"> 
+               <input class="button is-link" type="reset"Value="Reset" > 
+               </div>      
+           </div>
+         </div>
+     </form><br><br>
+    {% endblock %}
+
+    {% block content %}
+      {% include "footer.twig" %}
+    {% endblock %}
+
+
+  

@@ -1,8 +1,61 @@
 <html>
   <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.2/tailwind.min.css">
+      <link rel="stylesheet" type="text/css" href="assets\css\bulma.css">
+      <link rel="stylesheet" type="text/css" href="assets\css\style.css">
+      <link rel="stylesheet" type="text/css" href="assets\css\lightbox.css">
+
   </head>
   <body>
-    
+      {% block info %}
+      {% endblock %}
+
+      <div class="container">
+          {% block profile %}
+          {% endblock %}
+          <br>
+          {% block programming %}
+          {% endblock %}
+          <br>
+          {% block education %}
+          {% endblock %}
+          <br>
+          {% block portfolio %}
+          {% endblock %}
+          <br>
+          {% block contact %}
+          {% endblock %}
+      </div>
+
+      {% block content %}
+      {% endblock %}
+      
+
+
+      <script src="dist/js/lightbox-plus-jquery.js"> </script>
+      <script>
+         lightbox.option({
+          'resizeDuration': 250,
+          'fadeDuration' : 500,
+          'wrapAround': true,
+          'alwaysShowNavOnTouchDevices' : true
+          })
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    <script>
+      $.validate({
+      });
+    </script>
+    <script type="text/javascript">
+      (function() {
+        var burger = document.querySelector('.burger');
+        var nav = document.querySelector('#'+burger.dataset.target);
+        burger.addEventListener('click', function(){
+          burger.classList.toggle('is-active');
+          nav.classList.toggle('is-active');
+        });
+      })();
+ </script>
+
   </body>
 </html>

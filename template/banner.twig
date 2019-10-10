@@ -1,6 +1,34 @@
-<div class="w-full h-32 p-8 bg-blue-600 text-white">
-    <h2 class="text-3xl">
-      {{ title }}
-    </h2>
-    {{ description }}
-  </div>
+  <nav class="navbar is-dark is-fixed-top">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#home">
+              <img src="assets\img\nav.png"  width="100" height="80">
+          </a>
+          <span class="navbar-burger burger" data-target="navMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+              </span>
+         </div>
+        <div id="navMenu" class="navbar-menu">
+          <div class="navbar-end">
+                <a class="navbar-item" href="#profile">Profile</a>
+                <a class="navbar-item" href="#skills"> Skill </a>
+                <a class="navbar-item" href="#education">Education</a>
+                <a class="navbar-item" href="#portfolio">Portofolio</a>
+                <a class="navbar-item" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  <section class=" is-fullheight-with-navbar" id="home">
+    <div class="banner is-flex-mobile	flex">
+          <img src="{{banner}}" class="banner-image">
+      <div class="text">
+      <h2 style="font-size: 40px">Welcome to my web</h2>
+        <h1 style="font-size: 50px"> Fakhri WEB </h1>
+        <p> From Zero To Hero </p>
+      </div>
+    </div>
+  </section>
