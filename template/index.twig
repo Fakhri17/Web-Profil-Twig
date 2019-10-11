@@ -17,11 +17,11 @@
           </div>
           <div class="card-content">
             <div class="content subtitle">
-              Nama   <strong> Fakhri Alauddin         </strong>.
-              TTL    <strong> Jombang, 31  Maret 2001 </strong>.
-              Umur   <strong> 18 Tahun                </strong>.
-              Alamat <strong> Jl.Raya Benowo No 06    </strong>.
-              Hobi   <strong> Coding dan Editing      </strong>.
+              Nama   <strong> {{nama}}        </strong>.
+              TTL    <strong> {{ttl}} </strong>.
+              Umur   <strong> {{umur}}                </strong>.
+              Alamat <strong> {{alamat}}    </strong>.
+              Hobi   <strong> {{hobi}}      </strong>.
             </div>
           </div>
         </div>
@@ -120,7 +120,7 @@
     {% endblock %}
 
     {% block contact %}
-    <div class="container has-text-centered ">
+    <div class="container has-text-centered" id="contact">
       <h1 class="title"> Contact </h1>
     </div><br><br>
 
@@ -166,7 +166,7 @@
      </form><br><br>
     {% endblock %}
 
-    {% block content %}
+    {% block footer %}
       {% include "footer.twig" %}
     {% endblock %}
 

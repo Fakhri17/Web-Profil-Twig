@@ -6,6 +6,11 @@ echo $twig->render('index.twig', [
     'banner'  => 'assets/img/head.jpg',
     'profile' => 'assets/img/me.jpg',
     'sosmed'  => 'assets/img/bio.jpg',
+    'nama'    => 'Fakhri Alauddin',
+    'ttl'     => 'Jombang, 31  Maret 2001',
+    'umur'    => '18 Tahun ',
+    'alamat'  => 'Jl.Raya Benowo No 06',
+    'hobi'    => 'Coding dan Editing',
     
     'skills' => [ 
         [ 
@@ -101,12 +106,6 @@ echo $twig->render('index.twig', [
           ],
       'komplit' => 'Completed : 16 March 2019',
       'id' => '0',
-      'class'=>[
-        'button is-rounded is-danger',
-        'button is-rounded is-primary',
-        'button is-rounded is-link',
-        'button is-rounded is-info',
-      ],
       'label' => [
         'HTML',
         'CSS',
@@ -130,12 +129,6 @@ echo $twig->render('index.twig', [
       ],
       'komplit' => 'Completed : 26 November 2019',
       'id' => '1',
-      'class'=>[
-        'button is-rounded is-danger',
-        'button is-rounded is-primary',
-        'button is-rounded is-link',
-        'button is-rounded is-info',
-      ],
       'label' => [
         'Llightroom',
         'Pixellab',
@@ -159,12 +152,6 @@ echo $twig->render('index.twig', [
       ],
       'komplit' => 'Completed : 12 September 2019',
       'id' => '2', 
-      'class'=>[
-        'button is-rounded is-danger',
-        'button is-rounded is-primary',
-        'button is-rounded is-link',
-        'button is-rounded is-info',
-      ],
       'label' => [
         'HTML',
         'CSS',

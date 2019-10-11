@@ -8,6 +8,8 @@
   <body>
       {% block info %}
       {% endblock %}
+      {% block send %}
+      {% endblock %}
 
       <div class="container">
           {% block profile %}
@@ -25,8 +27,7 @@
           {% block contact %}
           {% endblock %}
       </div>
-
-      {% block content %}
+      {% block footer %}
       {% endblock %}
       
 
@@ -45,8 +46,7 @@
     <script>
       $.validate({
       });
-    </script>
-    <script type="text/javascript">
+    </script><script type="text/javascript">
       (function() {
         var burger = document.querySelector('.burger');
         var nav = document.querySelector('#'+burger.dataset.target);
@@ -55,7 +55,12 @@
           nav.classList.toggle('is-active');
         });
       })();
- </script>
+      </script>
+      <script>
+           function goBack() {
+           window.history.back(-1);
+          }
+      </script>
 
   </body>
 </html>

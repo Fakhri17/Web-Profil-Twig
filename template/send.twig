@@ -1,0 +1,37 @@
+{% extends "layout.twig" %}
+{% block send %}
+<div class="text2">
+    <div class= "container has-text-centered ">
+      <h1 class="title"> Terima Kasih </h1>
+    </div>
+  </div>     
+  
+        {% if post.Email is defined %}
+       <div class="container">
+        <div class="notification is-primary">
+         <div class="textpf has-text-justified is-family-monospace">
+            <h1> Aku akan kirim balik melalui emailmu <strong>{{post.Email}}
+            </strong></h1>
+          </div> 
+         </div>
+         <a class="button" onclick="goBack()">Back</a>
+       </div>
+        
+       {% else %}
+  
+        <div class="container">
+          <div class="notification is-primary">
+            <div class="textpf has-text-justified is-family-monospace">
+              <h1> Submit Form tidak ditemukan. </h1>
+           </div>
+           <script>
+            setTimeout(function(){
+              window.location.href = 'index.php';
+            }, 2000);
+          </script>
+          </div>
+        </div> 
+       {% endif %}
+       {% endblock %}
+  
+  
