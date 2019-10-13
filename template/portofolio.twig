@@ -1,0 +1,77 @@
+<html>
+  <head>
+      <link rel="stylesheet" type="text/css" href="assets\css\bulma.css">
+      <link rel="stylesheet" type="text/css" href="assets\css\style.css">
+      <link rel="stylesheet" type="text/css" href="assets\css\lightbox.css">
+ </head>
+ <body>
+{% for get in gets %}
+{% for item in portfolio if item.id == get.id %}
+<div class="text2">
+    <div class="container has-text-centered">
+        <h1 class="title is-italic"> Welcome to My Portfolio</h1>
+    </div>
+</div>
+<div class="text2">
+    <div class="container has-text-centered">
+        <h1 class="title has-text-weight-bold">{{item.judul}}</h1>
+        <p class="subtitle">{{item.sub}}</p>
+        {% for rounded in item.class %}
+        <button class="button is-rounded {{rounded}}">{{item.label[loop.index0]}}</button>
+        {% endfor %}
+        <p class="subtitle">{{item.komplit}}</p>
+        <a class="button" onclick="goBack()"> <- Back</a>
+    </div>
+</div>
+<div class="container">
+    <div class="tile is-ancestor">
+        <div class="tile is-parent">
+            <div class="tile is-child box">
+                <a href="{{item.imgweb[0]}}" data-lightbox="{{item.galeri}}"
+                data-title="{{item.capt[0]}}"><img src="{{item.imgweb[0]}}" alt=""></a>
+            </div>
+            <div class="tile is-4 is-vertical is-parent">
+                <div class="tile is-child box">
+                    <a href="{{item.imgweb[1]}}" data-lightbox="{{item.galeri}}"
+                    data-title="{{item.capt[1]}}"><img src="{{item.imgweb[1]}}" alt=""></a>
+                </div>
+                <div class="tile is-child box">
+                    <a href="{{item.imgweb[2]}}" data-lightbox="{{item.galeri}}"
+                    data-title="{{item.capt[2]}}"><img src="{{item.imgweb[2]}}" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% else %}
+<div class="text2">
+    <div class="container has-text-centered">
+        <h1 class="title is-italic"> Tampilan Tidak tersedia </h1>
+    </div>
+    <script>
+        setTimeout(function(){
+          window.location.href = 'index.php';
+        }, 2000);
+      </script>
+</div>
+
+
+{% endfor %}
+{% endfor %}
+    <script src="assets/js/lightbox-plus-jquery.js"> </script>
+    <script>
+    lightbox.option({
+        'resizeDuration': 250,
+        'fadeDuration' : 500,
+        'wrapAround': true,
+        'alwaysShowNavOnTouchDevices' : true
+        })
+    </script><script>
+        function goBack() {
+        window.history.back(-1);
+    }
+    </script>
+    
+    </body>
+</html>

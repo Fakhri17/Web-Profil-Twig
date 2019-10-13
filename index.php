@@ -89,76 +89,26 @@ echo $twig->render('index.twig', [
             'imsch' => 'assets\img\smk2.jpg',
         ],
     ],
-    'portfolio' => [ 
-        [
-          'judul' => 'Web Profil',
-          'sub' => 'Pembuatan Web dengan Framework Boostrap',
-          'galeri'=> 'porto',
-          'imgweb' => [
-            'assets\img\image.jpg',
-            'assets\img\img2.jpg',
-            'assets\img\img3.jpg',
-          ],
-      'capt' => [
-            'Tampilan Awal',
-            'Tampilan Galeri',
-            'Tampilan contact',
-          ],
-      'komplit' => 'Completed : 16 March 2019',
-      'id' => '0',
-      'label' => [
-        'HTML',
-        'CSS',
-        'Javacript',
-        'Boostrap',
+      
+    'portfolio'=>[
+      [
+        'judul'=> 'Web Profil',
+        'sub'=> 'Pembuatan Web dengan Framework Boostrap',
+        'imgweb' => 'assets\img\image.jpg',
+        'id' => '0',
+      ],
+      [
+        'judul'=> 'Edit Foto',
+        'sub'=> 'Editing Foto Menggunakan Aplikasi Editing (Pixellab, Picsart, PS Touch)',
+        'imgweb' => 'assets\img\rpl.jpg',
+        'id' => '1',
+      ],
+      [
+        'judul'=> 'Web Company',
+        'sub'=> 'Pembuatan Web Company Dari Tugas guru',
+        'imgweb' => 'assets\img\host.jpg',
+        'id' => '2',
       ],
     ],
-    [
-      'judul' => 'Edit Foto',
-      'sub' => 'Editing Foto Menggunakan Aplikasi Editing (Pixellab, Picsart, PS Touch)',
-      'galeri'=> 'edit',
-      'imgweb' => [
-        'assets\img\rpl.jpg',
-        'assets\img\bio.jpg',
-        'assets\img\light.jpg',
-      ],
-      'capt' => [
-        'Pembuatan desain sticker',
-        'Hasil edit desain kelas RPL',
-        'Hasil edit Lightroom CC',
-      ],
-      'komplit' => 'Completed : 26 November 2019',
-      'id' => '1',
-      'label' => [
-        'Llightroom',
-        'Pixellab',
-        'Photoshop',
-        'PsTouch',
-      ],
-    ],
-    [
-      'judul' => 'Web Commpany ',
-      'sub' => ' Pembuatan Web Company Dari Tugas guru',
-      'galeri'=> 'comp',
-      'imgweb' => [
-        'assets\img\host.jpg',
-        'assets\img\host2.jpg',
-        'assets\img\host3.jpg'
-      ],
-      'capt' => [
-        'Tampilan Header',
-        'Tampilan team dan testimoni',
-        'Tampilan Contact',
-      ],
-      'komplit' => 'Completed : 12 September 2019',
-      'id' => '2', 
-      'label' => [
-        'HTML',
-        'CSS',
-        'Javacript',
-        'PHP',
-      ],
-    ],
-  ],
   
 ]);
