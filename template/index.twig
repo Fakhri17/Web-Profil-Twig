@@ -4,7 +4,7 @@
     {% include "banner.twig" %}
  {% endblock %}
 
-    {% block profile %}
+    {% block content %}
     <div class="columns is-dekstop">
       <div class="column is-half">
         <div class="card">
@@ -47,9 +47,6 @@
         </div>
       </div>
     </div>
-    {% endblock %}
-
-    {% block programming %}
     <div class="container has-text-centered" id="skills">
       <h1 class="title"> Programming</h1>
     </div> <br><br>
@@ -74,9 +71,7 @@
             </div>
         {% endfor %}
     </div>
-    {% endblock %}
 
-    {% block education %}
     <div class="container has-text-centered " id="education">
       <h1 class="title"> Education </h1>
     </div><br><br>
@@ -97,9 +92,7 @@
           </div>
         </div>
         {% endfor %}
-    {% endblock %}
 
-    {% block portfolio %}
     <div class="container has-text-centered" id="portfolio">
       <h1 class="title"> Portfolio </h1>
     </div><br><br>
@@ -117,9 +110,7 @@
       </div>
       {% endfor %}
     </div>
-    {% endblock %}
 
-    {% block contact %}
     <div class="container has-text-centered" id="contact">
       <h1 class="title"> Contact </h1>
     </div><br><br>
@@ -166,9 +157,25 @@
      </form><br><br>
     {% endblock %}
 
-    {% block footer %}
-      {% include "footer.twig" %}
+    {% block fotScript %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    <script>
+      $.validate({
+      });
+    </script><script type="text/javascript">
+      (function() {
+        var burger = document.querySelector('.burger');
+        var nav = document.querySelector('#'+burger.dataset.target);
+        burger.addEventListener('click', function(){
+          burger.classList.toggle('is-active');
+          nav.classList.toggle('is-active');
+        });
+      })();
+      </script>
     {% endblock %}
+
+   
 
 
   

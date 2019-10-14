@@ -3,53 +3,29 @@
       <link rel="stylesheet" type="text/css" href="assets\css\bulma.css">
       <link rel="stylesheet" type="text/css" href="assets\css\style.css">
       <link rel="stylesheet" type="text/css" href="assets\css\lightbox.css">
-
+      <meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
   </head>
   <body>
       {% block info %}
       {% endblock %}
-      {% block send %}
-      {% endblock %}
-
       <div class="container">
-          {% block profile %}
-          {% endblock %}
-          <br>
-          {% block programming %}
-          {% endblock %}
-          <br>
-          {% block education %}
-          {% endblock %}
-          <br>
-          {% block portfolio %}
-          {% endblock %}
-          <br>
-          {% block contact %}
-          {% endblock %}
+          {% block content %} {% endblock %}
       </div>
-      {% block footer %}
-      {% endblock %}
-      
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
-    <script>
-      $.validate({
-      });
-    </script><script type="text/javascript">
-      (function() {
-        var burger = document.querySelector('.burger');
-        var nav = document.querySelector('#'+burger.dataset.target);
-        burger.addEventListener('click', function(){
-          burger.classList.toggle('is-active');
-          nav.classList.toggle('is-active');
-        });
-      })();
-      </script>
+     
+      <div class="footerss">
+        <div class="content has-text-centered">
+          <p>
+             <strong>Website</strong> by <a href="#">Fakhri Alauddin</a>. 
+          </p>
+        </div>
+      </div>
       <script>
            function goBack() {
            window.history.back(-1);
           }
       </script>
+      {% block fotScript %}
+      {% endblock %}
 
   </body>
 </html>

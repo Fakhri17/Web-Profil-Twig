@@ -1,10 +1,5 @@
-<html>
-  <head>
-      <link rel="stylesheet" type="text/css" href="assets\css\bulma.css">
-      <link rel="stylesheet" type="text/css" href="assets\css\style.css">
-      <link rel="stylesheet" type="text/css" href="assets\css\lightbox.css">
- </head>
- <body>
+{% extends "layout.twig" %}
+{% block content %}
 {% for get in gets %}
 {% for item in portfolio if item.id == get.id %}
 <div class="text2">
@@ -49,14 +44,7 @@
     <div class="container has-text-centered">
         <h1 class="title is-italic"> Tampilan Tidak tersedia </h1>
     </div>
-    <script>
-        setTimeout(function(){
-          window.location.href = 'index.php';
-        }, 2000);
-      </script>
 </div>
-
-
 {% endfor %}
 {% endfor %}
     <script src="assets/js/lightbox-plus-jquery.js"> </script>
@@ -67,11 +55,5 @@
         'wrapAround': true,
         'alwaysShowNavOnTouchDevices' : true
         })
-    </script><script>
-        function goBack() {
-        window.history.back(-1);
-    }
     </script>
-    
-    </body>
-</html>
+    {% endblock %}
