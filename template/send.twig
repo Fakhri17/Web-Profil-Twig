@@ -24,14 +24,21 @@
             <div class="textpf has-text-justified is-family-monospace">
               <h1> Submit Form tidak ditemukan. </h1>
            </div>
-           <script>
-            setTimeout(function(){
-              window.location.href = 'index.php';
-            }, 2000);
-          </script>
           </div>
         </div> 
        {% endif %}
        {% endblock %}
-  
+
+    {% block fotScript %}
+    {% if post.Email is defined %}
+    {% else %}
+      <script>
+      setTimeout(function(){
+        window.location.href = 'index.php';
+      }, 2000);
+      </script>
+    {% endif %}
+    {% endblock %}
+       
+
   
