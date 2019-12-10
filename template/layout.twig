@@ -2,10 +2,10 @@
   <head>
       <meta name="viewport" content= "width=device-width, initial-scale=1.0"> 
 
-      <link rel="stylesheet" type="text/css" href="assets\css\bulma.css">
-      <link rel="stylesheet" type="text/css" href="assets\css\style.css">
-      <link rel="stylesheet" type="text/css" href="assets\css\lightbox.css">
-      <link rel="shortcut icon" href="assets\img\bio.jpg">
+      <link rel="stylesheet" type="text/css" href="assets/css/bulma.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      <link rel="stylesheet" type="text/css" href="assets/css/lightbox.css">
+      <link rel="shortcut icon" href="assets/img/bio.jpg">
       <meta name="viewport" content= "width=device-width, initial-scale=1.0">
       <meta name="title" content="Web Profil">
       <meta name="description" content="Web Profil with Bulma Framework">
@@ -13,8 +13,10 @@
       <title> Web Profil Twig</title> 
   </head>
   <body>
+
       {% block info %}
       {% endblock %}
+
       <div class="container">
           {% block content %} {% endblock %}
       </div>
@@ -26,11 +28,13 @@
           </p>
         </div>
       </div>
+
       <script>
            function goBack() {
            window.history.back(-1);
           }
       </script>
+
       {% block fotScript %}
       {% endblock %}
 
